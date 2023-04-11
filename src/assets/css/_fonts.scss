@@ -131,7 +131,7 @@ $fontFamilyMonospace: "Computer Modern Typewriter", monospace;
   // font-family: $fontFamilyHelvetica;
   font-family: $fontFamilyComputerModern;
 
-  font-size: 14px !important;
+  font-size: 25px !important;
   line-height: 1.5;
   // letter-spacing: 0.03em;
   letter-spacing: 0.00em;
@@ -141,7 +141,7 @@ $fontFamilyMonospace: "Computer Modern Typewriter", monospace;
   // text-transform: uppercase;
 
   @include media(">=tablet", "<desktop") {
-    font-size: 25px !important;
+    font-size: 30px !important;
   }
 
   @include media(">=desktop") {
@@ -153,10 +153,10 @@ $fontFamilyMonospace: "Computer Modern Typewriter", monospace;
   @include font-heading();
   font-style: italic;
   letter-spacing: -0.01em;
-  font-size: 12px !important;
+  font-size: 20px !important;
 
   @include media(">=tablet", "<desktop") {
-    font-size: 20px !important;
+    font-size: 25px !important;
   }
 
   @include media(">=desktop") {
