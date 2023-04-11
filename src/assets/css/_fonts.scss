@@ -128,36 +128,39 @@ $fontFamilyMonospace: "Computer Modern Typewriter", monospace;
 }
 
 @mixin font-heading() {
-  font-family: $fontFamilyHelvetica;
+  // font-family: $fontFamilyHelvetica;
+  font-family: $fontFamilyComputerModern;
 
   font-size: 14px !important;
   line-height: 1.5;
-  letter-spacing: 0.03em;
+  // letter-spacing: 0.03em;
+  letter-spacing: 0.00em;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: 400;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @include media(">=tablet", "<desktop") {
-    font-size: 18px !important;
+    font-size: 25px !important;
   }
 
   @include media(">=desktop") {
-    font-size: 20px !important;
+    font-size: 35px !important;
   }
 }
 
 @mixin font-heading-small() {
   @include font-heading();
-
+  font-style: italic;
+  letter-spacing: -0.01em;
   font-size: 12px !important;
 
   @include media(">=tablet", "<desktop") {
-    font-size: 14px !important;
+    font-size: 20px !important;
   }
 
   @include media(">=desktop") {
-    font-size: 16px !important;
+    font-size: 25px !important;
   }
 }
 

@@ -55,13 +55,13 @@
   }
 
   @include media(">=desktop") {
-    @include document-width(700px, 900px);
+    @include document-width(750px, 900px);
     margin-left: auto;
     margin-right: auto;
   }
 
   @include media(">=huge") {
-    @include document-width(700px, 1100px);
+    @include document-width(900px, 1100px);
   }
 
   // FIXME: These are set by various things and come from ltx:note in the frontmatter.

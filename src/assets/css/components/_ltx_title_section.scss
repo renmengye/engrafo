@@ -3,7 +3,8 @@
 .ltx_title_section {
   @include font-heading();
 
-  margin-bottom: 4em;
+  // margin-bottom: 4em;
+  margin: 2.5em 0 1.5em 0;
 
   .ltx_tag_section {
     display: inline-block;

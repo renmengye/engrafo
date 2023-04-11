@@ -6,7 +6,8 @@
   margin-bottom: 1em;
 
   .ltx_personname {
-    font-weight: bold;
+    // font-weight: bold;
+    font-weight: normal;
 
     // In case of multiple notes per author, separate them with comma.
     .ltx_note_mark:not(:last-child):after {
