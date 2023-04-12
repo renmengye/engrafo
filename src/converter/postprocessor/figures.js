@@ -8,9 +8,9 @@ module.exports = function (document) {
       figure.appendChild(figure.children[0]);
     }
     // Do not reduce subfigure.
-    if (figure.children[0].tagName != "TABLE"){
+    if (figure.getElementsByTagName("figure").length == 0){
       // Resize images to bump up resolution.
-      // We assume that latexML will always have width
+      // We assume that latexML will always have width.
       Array.from(figure.getElementsByTagName("img")).forEach((img) => {
         width = img.getAttribute("width");
         height = img.getAttribute("height");
@@ -19,10 +19,22 @@ module.exports = function (document) {
       });
     }
     else{
-      // no margin for subfigure
+      // No margin for subfigure.
       Array.from(figure.getElementsByTagName("figure")).forEach((fig) => {
         fig.style.margin = "0px";
       });
+    }
+    // No padding for algorithm box.
+    if (figure.classList.contains("ltx_float_algorithm")) {
+      Array.from(figure.getElementsByClassName("ltx_listing")).forEach((list) => {
+        list.style.paddingLeft = "0em";
+        list.style.margin = "1em 0";
+      });
+      Array.from(figure.getElementsByTagName("figcaption")).forEach((caption) => {
+        caption.style.marginBottom = "1em";
+      });
+      figure.style.margin = "4em 0em 3em 0";
+      figure.classList.add("ltx_framed_bottom");
     }
   });
 };
