@@ -1,0 +1,2 @@
+#!/bin/sh
+exec docker build -f Dockerfile_arm -t engrafo-dev .
